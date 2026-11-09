@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+article {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background-color: yellow;
+}
+
+aside {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    padding: 20px;
+    background-color: gold;
+    line-height: 1.6;
+}
+
+.coupon {
+    flex: 0 0 150px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffff66;
+}
+
+.couponPlus {
+    flex: 0 0 180px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffff66;
+}
+
+.coupon img,
+.couponPlus img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.coupon p,
+.couponPlus p {
+    font-size: 14px;
+}
+
+/* Screens 1000px or smaller */
+@media screen and (max-width: 1000px) {
+    article {
+        position: relative;
+        width: 100%;
+    }
+
+    aside {
+        position: relative;
+        width: 100%;
+        right: auto;
+    }
+}
+
+/* Screens 1001px or larger */
+@media screen and (min-width: 1001px) {
+    article {
+        position: absolute;
+        width: 60%;
+    }
+
+    aside {
+        position: absolute;
+        width: 400px;
+    }
+}
